@@ -1,7 +1,7 @@
-FROM node:12.2.0-alpine
+FROM node:12.2-alpine
+RUN mkdir /app
 WORKDIR /app
-ENV PATH /app/node_modules/.bin:$PATH
-COPY package.json /app/package.json
-RUN npm install --silent
-RUN npm install react-scripts@3.0.1 -g --silent
-CMD ["npm", "start"]
+COPY /src /app/src
+COPY ["package.json", "package-lock.json*", "./"]
+RUN npm install --production --silent && mv node_modules ../
+EXPOSE 3000

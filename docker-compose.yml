@@ -1,15 +1,14 @@
-version: '3.3'
+version: '3.4'
 
 services:
-  sample:
-    container_name: sample
+  web:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - '.:/app'
-      - '/app/node_modules'
-    ports:
-      - '3001:3000'
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
+    command: npm start
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
