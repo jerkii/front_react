@@ -1,0 +1,24 @@
+.video{
+    background-color: rgb(233, 219, 208);
+    width: 100vw;
+    height: 70vw;
+    border-radius: 40px;
+
+    &-title{
+        position: absolute;
+        font-size: 2rem;
+        width: 58vw;
+        margin:45vw 0 0 10vw;
+    }
+    &-duration{
+        background-color: $cornflower;
+        border-radius: 13px;
+        margin: 70vw 2vw 0 auto;
+    }
+}
+
+.separator{
+    width: 375px;
+    height: 2px;
+    background-color: $darker;
+}
