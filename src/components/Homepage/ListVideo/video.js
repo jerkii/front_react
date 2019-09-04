@@ -10,7 +10,15 @@ function Videos({ onVideoSelected }) {
   
     return (
         <div>
-            {console.log(data.videos)};
+            {data.videos.edges.map(video => (
+                <div key={video.node.id}>
+                    <div className="video">
+                        <p className="video-title">{video.node.title}</p>
+                        <span className="video-duration">{video.node.duration}</span>
+                    </div>
+                    <div className="separator"></div>
+                </div>
+            ))};
         </div>
     );
   }
