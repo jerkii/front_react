@@ -5,20 +5,28 @@
 	border-radius: 40px;
 	margin-bottom: 20vw;
 	margin-top:5.2vw;
+	display: flex;
+	font-family: $font-multi;
 
 	&-title{
 		position: absolute;
 		width: 58vw;
 		margin:45vw 0 0 10vw;
-		color: white;
-		font-family: $font-multi;
+		color: $white;
 		font-size: 1.5rem;
 		font-weight: 800;
 	}
 	&-duration{
 		background-color: $cornflower;
+		width: 63px;
+		height: 26px;
 		border-radius: 13px;
-		margin: 70vw 2vw 0 auto;
+		color: $white;
+		font-weight: 800;
+		font-size: 12px;
+		text-align: center;
+		line-height: 1.5rem;
+		margin: 55vw 5vw auto auto;
 	}
 }
 
