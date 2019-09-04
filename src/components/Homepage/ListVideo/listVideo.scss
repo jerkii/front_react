@@ -1,14 +1,19 @@
 .video{
-	background-color: rgb(233, 219, 208);
+	background-color: $darker;
 	width: 100vw;
 	height: 70vw;
 	border-radius: 40px;
+	margin-bottom: 20vw;
+	margin-top:5.2vw;
 
 	&-title{
 		position: absolute;
-		font-size: 2rem;
 		width: 58vw;
 		margin:45vw 0 0 10vw;
+		color: white;
+		font-family: $font-multi;
+		font-size: 1.5rem;
+		font-weight: 800;
 	}
 	&-duration{
 		background-color: $cornflower;

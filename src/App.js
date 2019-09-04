@@ -4,9 +4,9 @@ import HomePage from './components/Homepage'
 
 function App() {
 	return (
-		<div className="App">
+		<React.Fragment className="App">
 			<HomePage/>
-		</div>
+		</React.Fragment>
 	);
 }
 

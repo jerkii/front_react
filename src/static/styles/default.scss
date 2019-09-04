@@ -1,8 +1,9 @@
 @import "variables.scss";
 @import "../../components/Homepage/ListVideo/listVideo.scss";
+@import "../../components/Footer/Tabs/tab.scss";
 
 html,body{
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     background-color: $dark;
 }

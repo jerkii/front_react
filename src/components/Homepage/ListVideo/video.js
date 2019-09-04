@@ -9,7 +9,7 @@ function Videos({ onVideoSelected }) {
 	if (error) return `Error! ${error.message}`;
 
 	return (
-		<div>
+		<React.Fragment>
 			{data.videos.edges.map(video => (
 				<div key={video.node.id}>
 					<div className="video">
@@ -19,7 +19,7 @@ function Videos({ onVideoSelected }) {
 					<div className="separator"></div>
 				</div>
 			))};
-		</div>
+		</React.Fragment>
 	);
 }
 export default Videos;
