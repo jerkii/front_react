@@ -7,13 +7,13 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 
 const client = new ApolloClient({
-    uri: 'http://localhost:5000/graphql',
-  });
+	uri: 'http://localhost:5000/graphql'
+});
 
 ReactDOM.render(
 	<ApolloProvider client={client}>
 		<App />
-	</ApolloProvider>, 
+	</ApolloProvider>,
 	document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
