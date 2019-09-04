@@ -1,10 +1,12 @@
 import React from 'react';
-import Videos from './video';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class ListVideo extends React.PureComponent {
 	render() {
 		return (
-			<Videos />
+			<Router>
+				<a><Link to="/video">Videos</Link></a>
+			</Router>
 		)
 	}
 }
