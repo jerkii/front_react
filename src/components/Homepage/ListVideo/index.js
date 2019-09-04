@@ -1,5 +1,5 @@
 import React from 'react';
-import Videos from './video';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const ListVideo = () => {
 	return (
