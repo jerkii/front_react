@@ -1,5 +1,5 @@
 import React from 'react';
-import Videos from './video';
+import Videos from './video'
 
 class ListVideo extends React.PureComponent {
 	render() {
