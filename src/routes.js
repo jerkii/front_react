@@ -1,12 +1,16 @@
-import Videos from "./components/Homepage/ListVideo/video";
+import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-const routes = {
-    path: '/',
-    component: App,
-    indexRoute: { component: Home },
-    childRoutes: [
-      { path: 'video', component: Videos }
-    ]
-  }
-  
-  render(<Router history={history} routes={routes} />, document.body)
+import Homepage from './components/Homepage';
+import Videos from './components/Homepage/ListVideo/video';
+
+export default function Routes () {
+	return (
+		<Router>
+			<div>
+				<Route exact path="/" component={Homepage}/>
+				<Route path="/video" component={Videos}/>
+			</div>
+		</Router>
+	)
+}
