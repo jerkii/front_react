@@ -1,18 +1,19 @@
 import React from 'react';
-import ListVideo from './ListVideo';
+import { useRoutes } from 'hookrouter';
 import Tabs from '../Footer/Tabs';
-import Search from '../Header/Search'
+import Search from '../Header/Search';
+import Routes from './routes';
 
-class Homepage extends React.PureComponent {
-	render() {
-		return (
-			<React.Fragment>
-				<Search/>
-				<Tabs/>
-				<ListVideo/>
-			</React.Fragment>
-		)
-	}
+const Homepage = () => {
+	const routeResult = useRoutes(Routes);
+
+	return (
+		<>
+			<Search/>
+				{routeResult}
+			<Tabs/>
+		</>
+	)
 }
 
 export default Homepage;

@@ -1,13 +1,13 @@
 import React from 'react';
+import { A } from 'hookrouter';
 
-class Tabs extends React.PureComponent {
-	render() {
-		return (
-			<div className="tab">
-				Icons Incoming
-			</div>
-		)
-	}
+const Tabs = () => {
+	return (
+		<div className="tab">
+			<A href="/">List</A>
+			<A href="/categories"> categories</A>
+		</div>
+	)
 }
 
 export default Tabs;

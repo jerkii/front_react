@@ -1,10 +1,15 @@
 import React from 'react';
 import './static/styles/default.scss';
+import { useRoutes } from 'hookrouter';
+import Routes from './routes'
 
 function App() {
+	const routeResult = useRoutes(Routes)
+
 	return (
-		<React.Fragment className="App">
-		</React.Fragment>
+		<div className="App">
+			{routeResult}
+		</div>
 	);
 }
 
