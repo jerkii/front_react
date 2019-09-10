@@ -3,14 +3,9 @@ import { gql } from 'apollo-boost';
 const GET_VIDEOS = gql`
 	{
 		videos{
-			edges{
-				node{
-					id
-					title
-					link
-					duration
-				}
-			}
+			id
+			title
+			duration
 		}
 	}`;
 

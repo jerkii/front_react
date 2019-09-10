@@ -11,12 +11,12 @@ function Videos({ onVideoSelected }) {
 
 	return (
 		<React.Fragment>
-			{data.videos.edges.map(video => (
-				<div key={video.node.id}>
-					<A href="/video">
+			{data.videos.map(video => (
+				<div key={video.id}>
+					<A href={'/video/' + video.id}>
 						<div className="video">
-							<p className="video-title">{video.node.title}</p>
-							<span className="video-duration">{video.node.duration}</span>
+							<p className="video-title">{video.title}</p>
+							<span className="video-duration">{video.duration}</span>
 						</div>
 					</A>
 					<div className="separator"></div>
