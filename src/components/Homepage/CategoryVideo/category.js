@@ -10,9 +10,9 @@ function Categories({ onCategorySelected }) {
 
 	return (
 		<>
-			{data.categories.edges.map(category => (
-				<div key={category.node.id}>
-					<p>{category.node.name}</p>
+			{data.categories.map(category => (
+				<div key={category.id}>
+					<p>{category.name}</p>
 				</div>
 			))};
 		</>

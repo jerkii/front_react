@@ -3,12 +3,8 @@ import { gql } from 'apollo-boost';
 const GET_CATEGORIES = gql`
 	{
 		categories{
-			edges{
-				node{
-					id
-					name
-				}
-			}
+			id
+			name
 		}
 	}`;
 

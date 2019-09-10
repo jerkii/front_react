@@ -4,8 +4,8 @@ import { A } from 'hookrouter';
 const Tabs = () => {
 	return (
 		<div className="tab">
-			<A href="/">List</A>
-			<A href="/categories"> categories</A>
+			<A href="/home/">List</A>
+			<A href="/home/categories"> categories</A>
 		</div>
 	)
 }
