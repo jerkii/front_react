@@ -7,6 +7,7 @@ const GET_VIDEOS = gql`
 				node{
 					id
 					title
+					link
 					duration
 				}
 			}
