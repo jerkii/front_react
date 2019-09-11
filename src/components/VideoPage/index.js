@@ -12,9 +12,13 @@ const VideoPage = ({ id }) => {
 	if (error) return `Error! ${error.message}`;
 
 	return (
-		<React.Fragment>
-			<p>{data.video.title}</p>;
-		</React.Fragment>
+		<>
+			<div className="player">
+
+			</div>
+			<h1 className="videoTitle">{data.video.title}</h1>;
+			<div className="separator"></div>
+		</>
 	);
 }
 
