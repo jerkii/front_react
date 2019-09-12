@@ -7,6 +7,10 @@ const GET_VIDEO = gql`
             title
             link
             duration
+            comments{
+                id
+                text
+            }
         }
 	}`;
 
