@@ -1,6 +1,7 @@
 import React from 'react';
 import GET_VIDEO from './query';
 import { useQuery } from '@apollo/react-hooks';
+import Comments from './Comments'
 
 const VideoPage = ({ id }) => {
 	const videoId = id.id
@@ -12,9 +13,14 @@ const VideoPage = ({ id }) => {
 	if (error) return `Error! ${error.message}`;
 
 	return (
-		<React.Fragment>
-			<p>{data.video.title}</p>;
-		</React.Fragment>
+		<>
+			<div className="player">
+
+			</div>
+			<h1 className="videoTitle">{data.video.title}</h1>;
+			<div className="separator"></div>
+			<Comments comments={data.video.comments}/>
+		</>
 	);
 }
 

@@ -1,0 +1,16 @@
+.player{
+    width: 100vw;
+    height: 70vw;
+    background-color: $darker;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.videoTitle{
+    color: $white;
+    padding: 0 5% 0 5%;
+    font-size: 2rem;
+    font-size: 36px;
+    font-family: $font-multi;
+    font-weight: 900;
+}
