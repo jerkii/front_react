@@ -2,6 +2,7 @@ import React from 'react';
 import './static/styles/default.scss';
 import { useRoutes, useRedirect } from 'hookrouter';
 import Routes from './routes'
+import { SkeletonTheme } from 'react-loading-skeleton';
 
 function App() {
 	const routeResult = useRoutes(Routes)
@@ -9,7 +10,9 @@ function App() {
 
 	return (
 		<div className="App">
-			{routeResult}
+			<SkeletonTheme color="#c9c9c9" highlightColor="#F1EFF1">
+				{routeResult}
+			</SkeletonTheme>
 		</div>
 	);
 }
