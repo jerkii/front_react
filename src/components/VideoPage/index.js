@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GET_VIDEO from './query';
 import { useQuery } from '@apollo/react-hooks';
 import Comments from './Comments'
 import Skeleton from 'react-loading-skeleton';
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
+import Drawer from 'react-drag-drawer';
 
 const VideoPage = ({ id }) => {
+	const [toggle, setToggle] = useState(false)
+
 	const videoId = id.id
 	const { loading, error, data } = useQuery(GET_VIDEO, {
 		variables: { videoId }
@@ -19,7 +22,7 @@ const VideoPage = ({ id }) => {
 			<div className="player">
 				<ReactPlayer
 					url={data.video.link}
-					controls="true"
+					controls
 					light="true"
 					width='100%'
 					height="100%"
@@ -27,7 +30,10 @@ const VideoPage = ({ id }) => {
 			</div>
 			<h1 className="videoTitle">{ data.video.title || <Skeleton count={2}/>}</h1>;
 			<div className="separator"></div>
-			<Comments comments={data.video.comments}/>
+			<div href="#" className="drawer" onClick={() => setToggle(true)}><div className="drawer-line"></div></div>
+			<Drawer open={toggle} onRequestClose={() => setToggle(false)}>
+				<Comments comments={data.video.comments}/>
+			</Drawer>
 		</>
 	);
 }

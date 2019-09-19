@@ -1,14 +1,15 @@
 .comments{
     background-color: $white;
     width: 100vw;
-    height: 40vh;
-    position: fixed;
-    bottom: 0;
+    height: 80vh;
+    margin-top: 20vh;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    padding: 5%;
+    box-sizing: border-box;
 
     &-line{
-        margin: 5% auto;
+        margin: 0 auto 5% auto;
         width: 77px;
         background-color: $pale-lilac;
         border-radius: 30px;
