@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Skeleton from 'react-loading-skeleton';
 import PostComment from './PostComment';
 
@@ -7,6 +7,12 @@ const toggleCommentCssClass = (index) => {
 }
 
 const Comments = ({ comments, videoId }) => {
+	const [comment, setComment]=useState('')
+
+	const updateComments = (text) => {
+		setComment(text)
+	}
+console.log(comments);
 	return (
 		<>
 			<div className="comments">
@@ -14,7 +20,7 @@ const Comments = ({ comments, videoId }) => {
 				{comments.map((comment, index) =>
 					<p key={comments.id} className={`comments-text__${toggleCommentCssClass(index)}`}>{comment.text || <Skeleton count={3} />}</p>
 				)}
-				<PostComment videoId={videoId} />
+				<PostComment videoId={videoId} updateComments={updateComments}/>
 			</div>
 		</>
 	);
