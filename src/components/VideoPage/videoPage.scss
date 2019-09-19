@@ -6,6 +6,24 @@
     border-bottom-right-radius: 30px;
 }
 
+.drawer{
+    width: 100vw;
+    height: 10vh;
+    background-color: $white;
+    bottom: 0;
+    position: fixed;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    &-line{
+        margin: 5% auto;
+        width: 77px;
+        background-color: $pale-lilac;
+        border-radius: 30px;
+        border: solid 2px $pale-lilac;
+    }
+}
+
 .videoTitle{
     color: $white;
     padding: 0 5% 0 5%;
