@@ -12,7 +12,7 @@ const PostComment = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         postComment({ variables: { videoId:videoId, text:text }})
-        props.updateComments(text)
+        props.updateComments(videoId, text)
     }
     
 	return (

@@ -7,12 +7,14 @@ const toggleCommentCssClass = (index) => {
 }
 
 const Comments = ({ comments, videoId }) => {
-	const [comment, setComment]=useState('')
+	const [comment, setComment]=useState({id:0, text:''})
 
-	const updateComments = (text) => {
-		setComment(text)
+	const updateComments = (videoId, text) => {
+
+		setComment({id:videoId, text:text})
+		comments.push(comment)
 	}
-console.log(comments);
+
 	return (
 		<>
 			<div className="comments">
