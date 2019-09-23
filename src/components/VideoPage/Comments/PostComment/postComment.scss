@@ -1,0 +1,22 @@
+.form{
+	position: fixed;
+	bottom: 0;
+	
+	input{
+		width: 100vw;
+		height: 8vh;
+		border: none;
+		border-top: 1px solid $pale-lilac;
+	}
+
+	button{
+		position: absolute;
+		margin: -3.5vh 0 auto -20vw;
+		border: none;
+		background-color: $weird-green;
+		color: $white;
+		height: 60px;
+		width: 60px;
+		border-radius:50%;
+	}
+}

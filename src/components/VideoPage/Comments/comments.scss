@@ -5,8 +5,10 @@
     margin-top: 20vh;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    padding: 5%;
+    padding-top: 5%;
+    padding-bottom:20%;
     box-sizing: border-box;
+    overflow: auto;
 
     &-line{
         margin: 0 auto 5% auto;
@@ -42,4 +44,8 @@
             font-weight: 600;
         }
     }
+}
+
+.comments::after{
+
 }
