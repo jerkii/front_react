@@ -31,8 +31,8 @@ const VideoPage = ({ id }) => {
 			<h1 className="videoTitle">{ data.video.title || <Skeleton count={2}/>}</h1>;
 			<div className="separator"></div>
 			<div href="#" className="drawer" onTouchMove={() => setToggle(true)}><div className="drawer-line"></div></div>
-			<Drawer open={toggle} onRequestClose={() => setToggle(false)}>
-				<Comments comments={data.video.comments} videoId={videoId}/>
+			<Drawer open={toggle}  onRequestClose={() => setToggle(false)}>
+				<Comments className="comments" comments={data.video.comments} videoId={videoId}/>
 			</Drawer>
 		</>
 	);

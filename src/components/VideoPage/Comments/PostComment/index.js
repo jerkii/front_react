@@ -17,7 +17,7 @@ const PostComment = (props) => {
     
 	return (
 		<>
-			<form onSubmit={(e) => handleSubmit(e)}>
+			<form className='form' onSubmit={(e) => handleSubmit(e)}>
                 <input type="text" onChange={(e) => setText(e.target.value)}/>
                 <button type="submit">Send</button>
             </form>
