@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import PostComment from './PostComment';
 
@@ -7,11 +7,10 @@ const toggleCommentCssClass = (index) => {
 }
 
 const Comments = ({ comments, videoId }) => {
-	const [comment, setComment]=useState({id:0, text:''})
+	const [comment, setComment] = useState({ id: 0, text: '' })
 
 	const updateComments = (videoId, text) => {
-
-		setComment({id:videoId, text:text})
+		setComment({ id: videoId, text: text })
 		comments.push(comment)
 	}
 
